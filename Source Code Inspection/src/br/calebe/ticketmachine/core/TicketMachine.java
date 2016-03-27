@@ -40,13 +40,13 @@ public class TicketMachine {
         return null;
     }
 
-    public String imprimir() throws SaldoInsuficienteException {
+    public int imprimir() throws SaldoInsuficienteException {
         if (saldo < valor) {
             throw new SaldoInsuficienteException();
+        } else {
+            System.out.println("saldo suficiente para compra");
         }
-        String result = "*****************\n";
-        result += "*** R$ " + saldo + ",00 ****\n";
-        result += "*****************\n";
-        return result;
+        
+        return saldo;
     }
 }
