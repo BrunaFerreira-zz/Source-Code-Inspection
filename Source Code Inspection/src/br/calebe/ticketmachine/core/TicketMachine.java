@@ -45,8 +45,7 @@ public class TicketMachine {
             throw new SaldoInsuficienteException();
         } else {
             System.out.println("saldo suficiente para compra");
-        }
-        
+        }      
         return saldo;
     }
 }
